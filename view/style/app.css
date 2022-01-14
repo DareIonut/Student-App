@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 2rem;
+}
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 2rem;
+  text-align: center;
+}
+button {
+  margin: 2rem;
+  background-color: rgba(32, 12, 214, 0.938);
+  color: white;
+  border-radius: 25px;
+  padding: 5px;
+}
+#table-delete {
+  text-align: center;
+}
+
+#deleteIT {
+  background-color: rgba(220, 20, 60, 0.938);
+  margin: 0;
+  padding: 0;
+}
+
+.slide-out-right {
+  -webkit-animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@-webkit-keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style/students.css" />
+    <title>Stundent App</title>
+  </head>
+  <body>
+    <h1>Panou Adăugare ⌨</h1>
+    <button id="add-student">Panou Studenți</button>
+
+    <div class="container-fluid px-1 py-5 mx-auto">
+      <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+          <div class="card">
+            <h2 class="text-center mb-4">Adăugare student</h2>
+            <form class="form-card" id="form">
+              <div class="row justify-content-between text-left">
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3"
+                    >Nume<span class="text-danger"> *</span></label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Introdu numele"
+                    required
+                  />
+                </div>
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3"
+                    >Prenumele<span class="text-danger"> *</span></label
+                  >
+                  <input
+                    type="text"
+                    id="lname"
+                    name="lname"
+                    placeholder="Introdu prenumele"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-between text-left">
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3"
+                    >Data Nașterii<span class="text-danger"> *</span></label
+                  >
+                  <input
+                    type="date"
+                    id="b-date"
+                    name="b-date"
+                    placeholder=""
+                    required
+                  />
+                </div>
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3"
+                    >Număr telefon<span class="text-danger"> *</span></label
+                  >
+                  <input
+                    type="text"
+                    id="phone-number"
+                    name="phone-number"
+                    placeholder=""
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-between text-left">
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3"
+                    >Specializare<span class="text-danger"> *</span></label
+                  >
+                  <input
+                    type="text"
+                    id="spec"
+                    name="spec"
+                    placeholder=""
+                    required
+                  />
+                </div>
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3"
+                    >An<span class="text-danger"> *</span></label
+                  >
+                  <input
+                    type="number"
+                    max="4"
+                    id="year"
+                    name="year"
+                    placeholder=""
+                    required
+                  />
+                </div>
+              </div>
+              <span class="hero"></span>
+              <div class="row justify-content-center">
+                <div class="form-group col-sm-6">
+                  <button
+                    type="submit"
+                    id="submit-button"
+                    class="save btn-block btn-primary"
+                  >
+                    Salvează
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./scripts/students.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </body>
+</html>
