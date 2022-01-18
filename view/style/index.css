@@ -1,3 +1,4 @@
+/* Rectificari globale */
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +6,21 @@
 }
 body {
   font-size: 2rem;
+  background: rgb(249, 249, 253);
 }
 h1 {
   font-size: 4rem;
   font-weight: bold;
   margin: 2rem;
   text-align: center;
+}
+a {
+  margin: 2rem;
+  padding: 1rem 2rem;
+  color: white;
+  border-radius: 25px;
+  background-color: rgb(54, 54, 224);
+  text-decoration: none;
 }
 button {
   margin: 2rem;
@@ -19,21 +29,27 @@ button {
   border-radius: 25px;
   padding: 5px;
 }
-#table-delete {
+
+/* IDs */
+
+#btn-container {
   text-align: center;
 }
-
-#deleteIT {
+#btn-delete {
   background-color: rgba(220, 20, 60, 0.938);
   margin: 0;
   padding: 0;
 }
+
+/* Animatii */
 
 .slide-out-right {
   -webkit-animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
     both;
   animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
+
+/* Keyframes pentru animatii */
 
 @-webkit-keyframes slide-out-right {
   0% {

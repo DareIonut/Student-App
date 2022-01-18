@@ -1,0 +1,33 @@
+.login-form {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #add8e6de;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+}
+.login-form input {
+  font-size: 3rem;
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: none;
+}
+.login-form button {
+  font-size: 3rem;
+  background-color: rgb(123, 167, 152);
+  color: white;
+  font-family: sans-serif;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+.error {
+  color: rgba(158, 33, 33, 0.931);
+  font-size: 1rem;
+  margin: 0;
+}

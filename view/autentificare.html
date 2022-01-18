@@ -22,16 +22,31 @@
     <title>Manager Studenți 🖥</title>
   </head>
   <body>
-    <!-- Zona de titlu si navigatie -->
+    <div class="login-form">
+      <form action="submit" class="submit">
+        <label for="email">Name:</label>
+        <br />
+        <input type="email" class="input-email" required />
+        <br />
+        <label for="password">Password:</label>
+        <br />
+        <input
+          type="password"
+          autocomplete="on"
+          class="input-password"
+          required
+        />
+        <br />
+        <span class="error"></span>
+        <br />
+        <button type="submit" class="signin">Logare Admin</button>
+      </form>
+    </div>
     <h1>Vizualizarea studenților 👩‍🎓</h1>
-    <nav>
-      <a href="./students.html">Adăugare student</a>
-      <button class="update">🔂</button>
-      <a href="./autentificare.html">Sign out</a>
-    </nav>
-
-    <!-- Zona Tabelului cu studenti -->
-    <div class="container-fluid">
+    <button class="add-student">Adăugare student</button>
+    <button class="update">🔂</button>
+    <button class="signout">Sign out</button>
+    <div class="container-fluid display-students flex">
       <table class="table">
         <thead class="thead-dark">
           <tr>
@@ -45,13 +60,28 @@
             <th scope="col">Șterge 🔥</th>
           </tr>
         </thead>
-        <tbody class="student-list">
-          <!-- Aici se vor adauga studentii din JavaScript -->
-        </tbody>
+        <tbody class="add-table"></tbody>
       </table>
     </div>
 
-    <!-- Aici avem scripturile pentru dependencies (bootstrap, jquery,pooper, axios) -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDixZ1z_Xt1GlrqQzZRsD-l8qXeUeEn-vs",
+        authDomain: "auth-pair.firebaseapp.com",
+        projectId: "auth-pair",
+        storageBucket: "auth-pair.appspot.com",
+        messagingSenderId: "194538511576",
+        appId: "1:194538511576:web:c4bffce5ad579905d94bad",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      const auth = firebase.auth();
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -68,8 +98,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-    <!-- Zona de legare cu scripturile JavaScript -->
     <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/auth.js" defer></script>
   </body>
 </html>
