@@ -1,12 +1,16 @@
 // Selectori globali
 const table = document.querySelector(".student-list");
 const updateBtn = document.querySelector(".update");
+const addBtn = document.querySelector(".add");
+const signOutBtn = document.querySelector(".sign-out");
 
 // Apelam functia pentru a primi datele din tabel
 getData();
 
-// Setare button pentru a obtinerea datelor in mod asincron
+// Setare butoane
 updateBtn.onclick = () => getData();
+addBtn.onclick = () => location.replace("./form.html");
+signOutBtn.onclick = () => location.replace("./index.html");
 
 // Functie asincrona pentru obtinerea datelor de la API
 async function getData() {
@@ -47,7 +51,7 @@ const createStudent = (data) => {
     <td>${element.telefon}</td>
     <td>${element.specializare}</td>
     <td>${element.an}</td>
-    <td id="btn-container"><button id="btn-delete">🗑️</button></td>`;
+    <td id="btn-container"><button id="btn-delete"><i class="fas fa-user-minus icon"></i></button></td>`;
 
     // Tabelul o sa primeasca o noua coloana
     table.appendChild(tr);

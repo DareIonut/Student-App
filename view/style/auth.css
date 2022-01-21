@@ -1,22 +1,26 @@
+body {
+  background-color: #add8e6de;
+  font-size: 1.5rem;
+}
+h1 {
+  text-align: center;
+  margin: 1rem;
+}
 .login-form {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background-color: #add8e6de;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
   color: white;
 }
 .login-form input {
-  font-size: 3rem;
   padding: 0.5rem;
   border-radius: 20px;
   border: none;
 }
 .login-form button {
-  font-size: 3rem;
   background-color: rgb(123, 167, 152);
   color: white;
   font-family: sans-serif;

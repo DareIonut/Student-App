@@ -5,8 +5,8 @@
   box-sizing: border-box;
 }
 body {
-  font-size: 2rem;
-  background: rgb(249, 249, 253);
+  font-size: 1.5rem;
+  background: rgb(255, 255, 255);
 }
 h1 {
   font-size: 4rem;
@@ -14,20 +14,18 @@ h1 {
   margin: 2rem;
   text-align: center;
 }
-a {
-  margin: 2rem;
-  padding: 1rem 2rem;
-  color: white;
-  border-radius: 25px;
-  background-color: rgb(54, 54, 224);
-  text-decoration: none;
-}
 button {
-  margin: 2rem;
-  background-color: rgba(32, 12, 214, 0.938);
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem 1rem;
+  background-color: rgb(64, 57, 145);
   color: white;
-  border-radius: 25px;
-  padding: 5px;
+  border: none;
+  border-radius: 50%;
+  outline-color: white;
+}
+button:hover {
+  background-color: rgb(62, 67, 83);
 }
 
 /* IDs */
@@ -40,7 +38,28 @@ button {
   margin: 0;
   padding: 0;
 }
+#btn-delete:hover {
+  background-color: rgb(59, 35, 35);
+}
 
+/* Clase */
+.nav {
+  position: fixed;
+  bottom: 0rem;
+  right: 1rem;
+  width: max-content;
+  background-color: #343a40;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.icon {
+  font-size: 2rem;
+  pointer-events: none;
+}
+.table .thead-dark th {
+  border: none;
+}
 /* Animatii */
 
 .slide-out-right {

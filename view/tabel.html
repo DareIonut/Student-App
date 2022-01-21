@@ -8,45 +8,39 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS si FontAwesome -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Legarea la fisierul CSS -->
-    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="stylesheet" href="./style/tabel.css" />
 
     <title>Manager Studenți 🖥</title>
   </head>
   <body>
-    <div class="login-form">
-      <form action="submit" class="submit">
-        <label for="email">Name:</label>
-        <br />
-        <input type="email" class="input-email" required />
-        <br />
-        <label for="password">Password:</label>
-        <br />
-        <input
-          type="password"
-          autocomplete="on"
-          class="input-password"
-          required
-        />
-        <br />
-        <span class="error"></span>
-        <br />
-        <button type="submit" class="signin">Logare Admin</button>
-      </form>
-    </div>
-    <h1>Vizualizarea studenților 👩‍🎓</h1>
-    <button class="add-student">Adăugare student</button>
-    <button class="update">🔂</button>
-    <button class="signout">Sign out</button>
-    <div class="container-fluid display-students flex">
+    <!-- Zona de titlu -->
+    <h1>Management Student 👩‍🎓</h1>
+
+    <!-- Zona Tabelului cu studenti -->
+    <div class="container-fluid">
+      <div class="nav">
+        <button class="add"><i class="fas fa-plus icon"></i></button>
+        <button class="update"><i class="fas fa-sync-alt icon"></i></button>
+        <button class="sign-out">
+          <i class="fas fa-sign-out-alt icon"></i>
+        </button>
+      </div>
       <table class="table">
         <thead class="thead-dark">
           <tr>
@@ -60,28 +54,13 @@
             <th scope="col">Șterge 🔥</th>
           </tr>
         </thead>
-        <tbody class="add-table"></tbody>
+        <tbody class="student-list">
+          <!-- Aici se vor adauga studentii din JavaScript -->
+        </tbody>
       </table>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
-    <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyDixZ1z_Xt1GlrqQzZRsD-l8qXeUeEn-vs",
-        authDomain: "auth-pair.firebaseapp.com",
-        projectId: "auth-pair",
-        storageBucket: "auth-pair.appspot.com",
-        messagingSenderId: "194538511576",
-        appId: "1:194538511576:web:c4bffce5ad579905d94bad",
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-
-      const auth = firebase.auth();
-    </script>
+    <!-- Aici avem scripturile pentru dependencies (bootstrap, jquery,pooper, axios) -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -98,7 +77,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./scripts/index.js" defer></script>
-    <script src="./scripts/auth.js" defer></script>
+
+    <!-- Zona de legare cu scripturile JavaScript -->
+    <script src="./scripts/tabel.js" defer></script>
   </body>
 </html>

@@ -17,41 +17,54 @@
     />
 
     <!-- Legarea la fisierul CSS -->
-    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="stylesheet" href="./style/auth.css" />
 
     <title>Manager Studenți 🖥</title>
   </head>
   <body>
-    <!-- Zona de titlu si navigatie -->
-    <h1>Vizualizarea studenților 👩‍🎓</h1>
-    <nav>
-      <a href="./students.html">Adăugare student</a>
-      <button class="update">🔂</button>
-      <a href="./autentificare.html">Sign out</a>
-    </nav>
+    <h1>Logare Administrator 🏆</h1>
 
-    <!-- Zona Tabelului cu studenti -->
-    <div class="container-fluid">
-      <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">StudentID</th>
-            <th scope="col">Nume</th>
-            <th scope="col">Prenume</th>
-            <th scope="col">Data Nașterii</th>
-            <th scope="col">Număr telefon</th>
-            <th scope="col">Specializare</th>
-            <th scope="col">An studii</th>
-            <th scope="col">Șterge 🔥</th>
-          </tr>
-        </thead>
-        <tbody class="student-list">
-          <!-- Aici se vor adauga studentii din JavaScript -->
-        </tbody>
-      </table>
+    <div class="login-form">
+      <form action="submit" class="submit">
+        <label for="email">Email:</label>
+        <br />
+        <input type="email" class="input-email" required />
+        <br />
+        <label for="password">Password:</label>
+        <br />
+        <input
+          type="password"
+          autocomplete="on"
+          class="input-password"
+          required
+        />
+        <br />
+        <span class="error"></span>
+        <br />
+        <button type="submit" class="signin">Logare Admin</button>
+        <button type="submit" class="register">Inregistrare</button>
+      </form>
     </div>
 
-    <!-- Aici avem scripturile pentru dependencies (bootstrap, jquery,pooper, axios) -->
+    <!-- Configuratii Firebase si dependencies -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDixZ1z_Xt1GlrqQzZRsD-l8qXeUeEn-vs",
+        authDomain: "auth-pair.firebaseapp.com",
+        projectId: "auth-pair",
+        storageBucket: "auth-pair.appspot.com",
+        messagingSenderId: "194538511576",
+        appId: "1:194538511576:web:c4bffce5ad579905d94bad",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      const auth = firebase.auth();
+    </script>
+
+    <!-- Bootstrap dependenciess -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -67,9 +80,7 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <!-- Zona de legare cu scripturile JavaScript -->
-    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/auth.js" defer></script>
   </body>
 </html>

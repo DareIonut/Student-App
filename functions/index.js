@@ -1,18 +1,23 @@
+/* Acest API este rulat pe Firebase si foloseste Firebase Firestore care este o baza de date de tip NoSQL unde stocam date in format JSON */
+
+// Module
 const functions = require("firebase-functions");
 const app = require("express")();
 const cors = require("cors");
 const { db } = require("./admin");
 
 //Allowing CORS stuff
-
 const corsOptions = {
   origin: "*",
-  credentials: true, //access-control-allow-credentials:true
+  credentials: true,
   optionSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
-// create
+
+// Setam endpointurile API-ului si functia fiecaruia
+
+// Creeam in baza de date un student
 app.post("/create", (req, res) => {
   (async () => {
     try {
@@ -35,22 +40,8 @@ app.post("/create", (req, res) => {
     }
   })();
 });
-// read item
-app.get("/read/:item_id", (req, res) => {
-  (async () => {
-    try {
-      const document = db.collection("items").doc(req.params.item_id);
-      let item = await document.get();
-      let response = item.data();
-      return res.status(200).send(response);
-    } catch (error) {
-      console.log(error);
-      return res.status(500).send(error);
-    }
-  })();
-});
 
-// read all
+// Citim toti studentii
 app.get("/read", (req, res) => {
   (async () => {
     try {
@@ -79,23 +70,7 @@ app.get("/read", (req, res) => {
   })();
 });
 
-// update
-app.put("/update/:item_id", (req, res) => {
-  (async () => {
-    try {
-      const document = db.collection("items").doc(req.params.item_id);
-      await document.update({
-        item: req.body.item,
-      });
-      return res.status(200).send();
-    } catch (error) {
-      console.log(error);
-      return res.status(500).send(error);
-    }
-  })();
-});
-
-// delete
+// Stergem un student
 app.delete("/api/delete/:item_id", (req, res) => {
   (async () => {
     try {
@@ -109,4 +84,5 @@ app.delete("/api/delete/:item_id", (req, res) => {
   })();
 });
 
+// Initializam API
 exports.api = functions.https.onRequest(app);

@@ -1,3 +1,5 @@
+//Configurare Admin Firebase si Initializare Firebase
+
 const admin = require("firebase-admin");
 
 admin.initializeApp();

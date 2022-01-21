@@ -1,5 +1,6 @@
-//constants
+// Selectori
 const button = document.querySelector("#submit-button");
+const form = document.querySelector("#form");
 const getName = document.getElementById("name");
 const getSecondName = document.querySelector("#lname");
 const getDate = document.querySelector("#b-date");
@@ -9,7 +10,8 @@ const year = document.querySelector("#year");
 const page = document.querySelector("#add-student");
 const info = document.querySelector(".hero");
 
-page.onclick = () => location.replace("./index.html");
+// Setare eventuri butoane
+page.onclick = () => location.replace("./tabel.html");
 
 button.addEventListener("click", (e) => {
   e.preventDefault();
@@ -21,10 +23,13 @@ button.addEventListener("click", (e) => {
     specializare: getDomain.value,
     an: year.value,
   };
+
+  // Creeam userul in baza de date
   createUser(student);
-  console.log(student);
+  e.preventDefault();
 });
-//send director
+
+// Requestul pentru trimitere date la firebase
 const createUser = (user) => {
   axios
     .post("https://us-central1-auth-pair.cloudfunctions.net/api/create", user)
